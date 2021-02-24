@@ -83,21 +83,22 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.Re
       recipeViewHolder.recipeBitternessIndicator.setVisibility(View.GONE);
     }
 
-    ApiInterface apiService =
-            ApiClient.getClient().create(ApiInterface.class);
-    Call<Match> getRecipeCall = apiService.getRecipe(recipe.getId());
-
-    getRecipeCall.enqueue(new Callback<Match>() {
-      @Override
-      public void onResponse(Call<Match> call, Response<Match> response) {
-
-      }
-
-      @Override
-      public void onFailure(Call<Match> call, Throwable t) {
-
-      }
-    });
+    // TODO: Move this to a repository and use some mechanism to chain network requests
+//    ApiInterface apiService =
+//            ApiClient.getClient().create(ApiInterface.class);
+//    Call<Match> getRecipeCall = apiService.getRecipe(recipe.getId());
+//
+//    getRecipeCall.enqueue(new Callback<Match>() {
+//      @Override
+//      public void onResponse(Call<Match> call, Response<Match> response) {
+//
+//      }
+//
+//      @Override
+//      public void onFailure(Call<Match> call, Throwable t) {
+//
+//      }
+//    });
   }
 
   @Override
